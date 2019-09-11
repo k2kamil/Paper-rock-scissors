@@ -1,4 +1,4 @@
-// Computer move
+// COMPUTER MOVE
 
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 
@@ -18,9 +18,9 @@ if(randomNumber == 3){
   computerMove = 'nożyce';
 }
 
-printMessage('Mój ruch to: ' + computerMove);
+printMessage('Komputer zagrał: ' + computerMove);
 
-//Player move
+//PLAYER MOVE
 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
@@ -41,3 +41,52 @@ if(playerInput == '3'){
 }
 
 printMessage('Twój ruch to: ' + playerMove);
+
+
+//RESULTS
+
+//Comp play kamień
+
+if( computerMove == 'kamień' && playerMove == 'papier'){
+  printMessage('Ty wygrywasz!');
+}
+
+if( computerMove == 'kamień' && playerMove == 'nożyce'){
+  printMessage('Przegrywasz!');
+}
+
+if( computerMove == 'kamień' && playerMove == 'kamień'){
+  printMessage('Remis!');
+}
+
+//Comp play papier
+
+if( computerMove == 'papier' && playerMove == 'papier'){
+  printMessage('Remis!');
+}
+
+if( computerMove == 'papier' && playerMove == 'kamień'){
+  printMessage('Przegrywasz!');
+}
+
+if( computerMove == 'papier' && playerMove == 'nożyce'){
+  printMessage('Ty wgrywasz!');
+}
+
+//Comp play nożyce
+
+if( computerMove == 'nożyce' && playerMove == 'papier'){
+  printMessage('Przegrywasz!');
+}
+
+if( computerMove == 'nożyce' && playerMove == 'kamień'){
+  printMessage('Wygrywasz!');
+}
+
+if( computerMove == 'nożyce' && playerMove == 'nożyce'){
+  printMessage('Remis!');
+}
+
+if(playerMove == 'nieznany ruch'){
+    printMessage('Wpisz liczbę 1,2 lub 3, ponieważ każda inna spowoduje błąd ! ! !');
+}
