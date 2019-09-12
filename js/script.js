@@ -55,15 +55,10 @@ if( computerMove == 'kamień' && playerMove == 'nożyce'){
   printMessage('Przegrywasz!');
 }
 
-if( computerMove == 'kamień' && playerMove == 'kamień'){
-  printMessage('Remis!');
-}
 
 //Comp play papier
 
-if( computerMove == 'papier' && playerMove == 'papier'){
-  printMessage('Remis!');
-}
+
 
 if( computerMove == 'papier' && playerMove == 'kamień'){
   printMessage('Przegrywasz!');
@@ -83,8 +78,8 @@ if( computerMove == 'nożyce' && playerMove == 'kamień'){
   printMessage('Wygrywasz!');
 }
 
-if( computerMove == 'nożyce' && playerMove == 'nożyce'){
-  printMessage('Remis!');
+if(computerMove == playerMove){
+    printMessage('Remis!')
 }
 
 if(playerMove == 'nieznany ruch'){
