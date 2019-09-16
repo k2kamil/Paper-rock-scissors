@@ -19,36 +19,14 @@ function getMoveName(argMoveId){
 
 
 function displayResult(argComputerMove, argPlayerMove){
-    if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
+    if((argComputerMove == 'kamień' && argPlayerMove == 'papier') || ( argComputerMove == 'papier' && argPlayerMove == 'nożyce') || ( argComputerMove == 'nożyce' && argPlayerMove == 'kamień')) {
   printMessage('Ty wygrywasz!');
 }
-
-if( argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
-  printMessage('Przegrywasz!');
+else if(argComputerMove == argPlayerMove){
+  printMessage('Remis!')
 }
-
-if( argComputerMove == 'papier' && argPlayerMove == 'kamień'){
-  printMessage('Przegrywasz!');
-}
-
-if( argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
-  printMessage('Ty wgrywasz!');
-}
-
-if( argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
-  printMessage('Przegrywasz!');
-}
-
-if( argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
-  printMessage('Wygrywasz!');
-}
-
-if(argComputerMove == argPlayerMove){
-    printMessage('Remis!')
-}
-
-if(argPlayerMove == 'nieznany ruch'){
-    printMessage('Wpisz liczbę 1,2 lub 3, ponieważ każda inna spowoduje błąd ! ! !');
+else {
+  printMessage('Przegrales');
 }
 }
 
